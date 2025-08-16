@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>來一杯滷味</title>
+    <link rel="shortcut icon" href="image/豆干君icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styleS.css" />
+  </head>
+  <body>
+    <div class="page">
+    <header>
+      <div class="header-content">
+      <img src="image/豆干君.png" alt="Logo" class="logo">
+      <h1>來一杯滷味</h1>
+      </div>
+      <nav>
+        <ul id="nav-list">
+          <li><a href="#about">關於我們</a></li>
+          <li><a href="#product">產品介紹</a></li>
+          <li><a href="#menu">菜單</a></li>
+          <li><a href="#contact">聯絡方法</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger">☰</div>
+    </header>
+    <!-- 關於我們 -->
+    <section class="about" id="about">
+      <div class="overlay"></div>
+      <div class="abouts">
+      <h2>慢火 2 小時，入口 2 秒愛上。</h2>
+      <p>
+        在來一杯滷味我們相信，美味值得用時間慢慢熬。
+嚴選每日新鮮食材，加入某某某特級醬油、十多種天然香料與中藥材，細火滷製 2 小時以上，讓每一口都充滿濃郁香氣與層次。
+不論是下班宵夜、追劇必備、聚會小酌，一杯在手，幸福到口！
+      </p>
+      <ul>
+        <li>嚴選食材，新鮮看得見</li>
+        <li>特製滷汁，香濃不死鹹</li>
+        <li>多款選擇，滿足各種口味</li>
+        <li>外帶、內用、團購一站搞定</li>
+      </ul>
+      </div>
+    </section>
+    <!-- 產品介紹 -->
+     <section class="product" id="product">
+    <h2>產品介紹</h2>
+  </section>
+    <section class="products" id="products">
+      <img src="image/蜜汁豆干.jpg" alt="蜜汁豆干"  />
+      <div class="product-list">
+        <div class="product-item">
+          <h3>蜜汁豆干</h3>
+          <ul>
+            <li>傳統手工製作，非基改黃豆製成</li>
+            <li>秘製蜜汁醬料，鹹中帶甜、不膩口</li>
+            <li>外Q內嫩，層次豐富、越嚼越香</li>
+            <li>無防腐劑，安心享受每一口</li>
+          </ul>
+
+          <h3>食用方式</h3>
+          <p>
+            直接食用當零嘴、搭配白飯或粥品超下飯、切片夾入吐司或潤餅，也可搭配茶飲、啤酒當下酒菜。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 菜單 -->
+    <section class="menu" id="menu">
+      <img src="image/來一杯滷味菜單.png" alt="menu" class="menu-image" />
+    </section>
+    <!-- 聯絡方法 -->
+    <section class="contact" id="contact">
+      <h2>聯絡方法</h2>
+      <ul>
+        <li>電話：<a href="tel:0912345678"></a></li>
+        <li>地址：</li>
+        <li>Email：<a href="@gmail.com">@gmail.com</a></li>
+        <li>
+          Facebook：<a href="https://facebook.com/luwei" target="_blank"
+            >來一杯滷味粉絲專頁</a
+          >
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <p>
+        Copyright © 2025 來一杯滷味 &nbsp;&nbsp;&nbsp; All rights reserved.
+      </p>
+    </footer>
+  </div>
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('#nav-list');
+
+    hamburger.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+  </script>
+  </body>
+</html>

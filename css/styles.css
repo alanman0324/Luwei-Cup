@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    /* 移除所有元素的外邊距 */
+    padding: 0;
+    /* 移除所有元素的內邊距 */
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('../font/jf-openhuninn-21.woff2') format('woff2'),
+        url('../font/jf-openhuninn-21.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #BBBBBB;
+    color: #475569;
+    font-family: 'MyFont', sans-serif;
+}
+
+.page {
+    padding-top: 70px;
+    /* 留出 header 高度 */
+    max-width: 1000px;
+    margin: 0 auto;
+    /* 置中頁面內容 */
+    background-color: #F5F5F5;
+    /* 背景顏色 */
+    box-shadow: 0px 0px 10px 10px #473b3b;
+    /* 添加陰影效果 */
+}
+
+.hamburger {
+    display: none;
+    /* 桌機隱藏 */
+    font-size: 4em;
+    cursor: pointer;
+    color: #F5F5F5;
+}
+
+h1 {
+    font-size: 38px;
+    /* 標題字體大小 */
+    color: #d4d4d4;
+}
+
+h2 {
+    font-size: 32px;
+    /* 標題字體大小 */
+    text-align: center;
+    /* 標題置中 */
+    margin: 15px 0;
+    /* 上下外邊距 */
+    color: #083344;
+    /* 標題顏色 */
+}
+
+h3 {
+    font-size: 24px;
+    /* 副標題字體大小 */
+    text-align: center;
+    /* 副標題置中 */
+    margin: 10px 0;
+    /* 上下外邊距 */
+    color: #083344;
+    /* 副標題顏色 */
+}
+
+img {
+    max-width: 100%;
+    /* 圖片最大寬度為容器的100% */
+    height: auto;
+    /* 高度自動調整以保持比例 */
+}
+
+header {
+    position: fixed;
+    /* 固定在頁面頂部 */
+    top: 0;
+    /* 距離頂部0px */
+    left: 50%;
+    /* 先把左邊放到中間 */
+    transform: translateX(-50%);
+    /* 再往左移半個寬度，使容器置中 */
+    max-width: 1001px;
+    /* 最大寬度 */
+    width: 100%;
+    /* 寬度隨容器縮放 */
+    display: flex;
+    justify-content: space-between;
+    /* 左右分開 */
+    align-items: center;
+    /* 垂直置中 */
+    background-color: #0c4a6e;
+    height: 70px;
+    z-index: 1000;
+    /* 確保在最上層 */
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    /* 水平排列 logo 與 h1 */
+    align-items: center;
+    /* 讓 logo 和 h1 垂直置中 */
+    gap: 10px;
+    /* logo 與 h1 的間距 */
+    background-color: #0c4a6e;
+}
+
+header .logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    object-fit: contain;
+    /* 避免變形 */
+    margin-left: 20px;
+    /* 與左邊內容間距 */
+}
+
+nav {
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列 */
+    justify-content: center;
+    /* 垂直置中 */
+    align-items: flex-end;
+    /* 讓內容靠右對齊 */
+}
+
+nav li {
+    display: inline-block;
+    /* 讓列表項目水平排列 */
+    margin-right: 2.5vw;
+    /* 每個項目的間距 */
+
+}
+
+nav ul li a {
+    color: #d4d4d4;
+    /* 文字顏色 */
+    text-decoration: none;
+    /* 移除底線 */
+    font-weight: bold;
+    /* 文字加粗 */
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    /* 滑鼠懸停時的顏色 */
+}
+
+.about {
+    position: relative;
+    height: 490px;
+    background-image: url('../image/background.jpg');
+    /* 你的背景圖 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    /* 文字水平置中 */
+    align-items: center;
+    /* 文字垂直置中 */
+    font-size: 20px;
+    /* 字體大小 */
+    line-height: 1.6;
+    /* 行高 */
+    margin: 0;
+    /* 外邊距 */
+}
+
+.about .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #999999;
+    /* 蓋一層灰色透明遮罩 */
+    opacity: 0.8;
+    /* 透明度（越小越透明）*/
+}
+
+.abouts {
+    width: 650px;
+    /* 設定寬度 */
+    height: 460px;
+    /* 設定高度 */
+    margin: 0 auto;
+    /* 水平置中 */
+    display: flex;
+    /* 使用彈性盒模型 */
+    flex-direction: column;
+    /* 垂直排列 */
+    align-items: center;
+    /* 水平置中 */
+    justify-content: center;
+    /* 垂直置中 */
+    color: #0c4a6e;
+    /* 文字顏色 */
+    text-align: center;
+    /*  多行文字置中  */
+    font-weight: 600;
+    /* 文字加粗 */
+    font-size: 20px;
+    /* 文字大小 */
+    z-index: 1;
+    /* 確保在遮罩上方 */
+}
+
+.abouts h2 {
+    color: #082f49;
+    /* 標題顏色 */
+    z-index: 2;
+}
+
+.products {
+    display: flex;
+    /* 使用彈性盒模型 */
+    width: 950px;
+    /* 設定寬度 */
+    font-size: 18px;
+    /* 字體大小 */
+    margin: 0 auto;
+    /* 容器水平置中 */
+}
+
+.products img {
+    width: 550px;
+    /* 圖片寬度 */
+    height: 350px;
+    /* 圖片高度 */
+    margin: 10px 50px;
+    /* 上下10px，左右50px的外邊距 */
+    object-fit: cover;
+    /* 保持比例並裁切溢出 */
+    border-radius: 30px;
+    /* 圓角邊框 */
+}
+
+.products .product-item {
+    width: 350px;
+    /* 產品列表寬度 */
+    height: 350px;
+    /* 產品列表高度 */
+    padding: 30px 30px;
+    /* 上下30px，左右30px的內邊距 */
+    margin: 0 25px;
+    /* 左右25px的外邊距 */
+    overflow-y: auto;
+    /* 允許垂直滾動 */
+}
+
+#menu {
+    display: flex;
+    /* 使用彈性盒模型 */
+    flex-direction: column;
+    /* 垂直排列 */
+    align-items: center;
+    /* 水平置中 */
+    justify-content: center;
+    /* 垂直置中 */
+}
+
+.menu-image {
+    width: 85%;
+    /* 每張圖片都自適應螢幕 */
+    height: auto;
+    margin: 0px auto;
+    border-radius: 30px;
+    /* 圓角邊框 */
+    box-shadow: 0px 0px 8px 3px #473b3b;
+    /* 添加陰影效果 */
+}
+
+.contact {
+    display: flex;
+    /* 使用彈性盒模型 */
+    flex-direction: column;
+    /* 垂直排列 */
+    align-items: center;
+    /* 水平置中 */
+    justify-content: center;
+    /* 垂直置中 */
+    color: #164e63;
+    /* 文字顏色 */
+    text-align: center;
+    /* 文字置中 */
+    font-weight: 500;
+    /* 文字加粗 */
+    font-size: 20px;
+    /* 字體大小 */
+    margin: 20px 0;
+    /* 上下外邊距 */
+}
+
+.contact li {
+    list-style: none;
+    /* 移除每個 li 的點點 */
+}
+
+footer {
+    text-align: center;
+    /* 置中對齊 */
+    padding: 10px;
+    /* 上下內邊距 */
+    background-color: #334155;
+    color: #f1f5f9;
+    /* 文字顏色 */
+    font-size: 14px;
+    /* 字體大小 */
+}
+
+
+
+
+/* 手機板 */
+@media (max-width: 768px) {
+    .page {
+        padding-top: 0;
+        /* 移除桌機用的 top 空間 */
+    }
+
+    h2 {
+        font-size: 28px;
+        /* 手機上字體大小 */
+        text-align: center;
+        /* 標題置中 */
+    }
+
+    h3 {
+        font-size: 20px;
+        /* 手機上副標題字體大小 */
+        text-align: center;
+        /* 副標題置中 */
+    }
+
+    .products {
+        flex-direction: column;
+        /* 手機上垂直排列產品 */
+        align-items: center;
+    }
+
+    .products img {
+        width: 100%;
+        /* 圖片寬度自適應螢幕 */
+        height: auto;
+        margin: 10px 0;
+        /* 上下10px的外邊距 */
+    }
+
+    .products .product-item {
+        width: 90%;
+        /* 產品列表寬度 */
+        height: auto;
+        /* 高度自適應內容 */
+    }
+
+    header {
+        top: 100%;
+        right: 0;
+        position: relative;
+        /* 讓內部元素可以絕對定位 */
+
+    }
+
+    header .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        height: 60px;
+        margin-left: 1px;
+        /* 與左邊內容間距 */
+        object-fit: contain;
+        /* 避免變形 */
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+    }
+
+    .header-content h1 {
+        display: none;
+        /* 隱藏標題 */
+    }
+
+    nav ul {
+        position: absolute;
+        display: flex;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-height: 0;
+        /* 初始高度 0 */
+        overflow: hidden;
+        /* 隱藏溢出 */
+        text-align: center;
+        background-color: #0c4a6e;
+        flex-direction: column;
+        transition: max-height 1s ease-in-out;
+        /* 0.5秒滑動動畫 */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        /* 每個項目上下間距 */
+    }
+
+    nav ul li a {
+        font-size: 20px;
+        /* 手機上字體大小 */
+        text-align: center;
+    }
+
+    nav ul.show {
+        max-height: 600px;
+        /* 展開高度，足夠放完整選單 */
+    }
+
+    .about {
+        width: 100%;
+        /* 手機上寬度 */
+        height: auto;
+        /* 高度自適應內容 */
+        margin: 0 auto;
+    }
+
+    .abouts {
+        width: 85%;
+        /* 手機上寬度 */
+        height: auto;
+        /* 高度自適應內容 */
+        padding: 20px;
+        /* 手機上內邊距 */
+        font-size: 18px;
+        /* 手機上字體大小 */
+    }
+
+    .products {
+        width: 100%;
+        /* 手機上寬度 */
+        flex-direction: column;
+        /* 手機上垂直排列產品 */
+        align-items: center;
+    }
+
+    .products img {
+        width: 65%;
+        /* 圖片寬度自適應螢幕 */
+        height: auto;
+        margin: 10px auto 0px;
+        /* 上10px下0px的外邊距 */
+    }
+
+    .products .product-item {
+        width: 80%;
+        /* 文字區塊也縮小，跟圖片差不多寬 */
+        height: auto;
+        /* 高度自動 */
+        margin: 0 auto;
+        /* 上下外邊距 */
+        padding: 20px;
+        /* 手機上內邊距 */
+        font-size: 16px;
+        text-align: center;
+        /* ⬅ 文字水平置中 */
+        display: flex;
+        /* 用 flex 讓文字垂直置中 */
+        flex-direction: column;
+        justify-content: center;
+        /* 垂直置中 */
+        align-items: center;
+        /* 水平置中 */
+    }
+
+    .menu-image {
+        width: 90%;
+        /* 每張圖片都自適應螢幕 */
+        height: auto;
+        margin: 0px auto;
+        border-radius: 10px;
+        /* 圓角邊框 */
+        box-shadow: 0px 0px 8px 3px #473b3b;
+        /* 添加陰影效果 */
+    }
+
+    .contact {
+        width: 90%;
+        /* 手機上寬度 */
+        font-size: 16px;
+        /* 手機上字體大小 */
+        margin: 20px auto;
+        /* 上下20px，左右自動 */
+    }
+}
