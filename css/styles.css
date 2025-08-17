@@ -14,7 +14,7 @@
 }
 
 body {
-    background-color: #BBBBBB;
+    background-color: #fef3c7;
     color: #78350f;
     font-family: 'MyFont', sans-serif;
 }
@@ -316,6 +316,34 @@ footer {
     /* 字體大小 */
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    display: none;
+    /* 預設隱藏 */
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#backToTop img {
+    width: 50px;
+    /* 調整按鈕大小 */
+    height: auto;
+    /* 調整按鈕大小 */
+    transition: transform 0.2s ease;
+    opacity: 0.3;
+    /* 預設透明度 */
+}
+
+#backToTop:hover img {
+    transform: scale(1.1);
+    /* 懸停微放大 */
+    opacity: 0.9;
+    /* 懸停時變不透明 */
+}
+
+
 
 
 
@@ -407,10 +435,14 @@ footer {
         cursor: pointer;
     }
 
-
-    .hamburger:hover {
+    .hamburger:hover:not(.active) {
         background-image: url("../image/豆干選單.png");
         /* 懸停時圖片 */
+    }
+
+    /* 點擊後變 X*/
+    .hamburger.active {
+        background-image: url('../image/豆干君icon.png');
     }
 
     .header-content h1 {
@@ -530,5 +562,17 @@ footer {
         /* 手機上字體大小 */
         margin: 20px auto;
         /* 上下20px，左右自動 */
+    }
+
+    #backToTop {
+        right: 20px;
+        bottom: 20px;
+        /* 手機上位置調整 */
+    }
+
+    #backToTop img {
+        width: 30px;
+        /* 調整按鈕大小 */
+        height: auto;
     }
 }
