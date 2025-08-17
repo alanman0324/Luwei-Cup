@@ -15,7 +15,7 @@
 
 body {
     background-color: #BBBBBB;
-    color: #475569;
+    color: #78350f;
     font-family: 'MyFont', sans-serif;
 }
 
@@ -23,26 +23,20 @@ body {
     padding-top: 70px;
     /* 留出 header 高度 */
     max-width: 1000px;
+    width: 100%;
+    /* 寬度隨容器縮放 */
     margin: 0 auto;
     /* 置中頁面內容 */
-    background-color: #F5F5F5;
+    background-color: #fffbeb;
     /* 背景顏色 */
     box-shadow: 0px 0px 10px 10px #473b3b;
     /* 添加陰影效果 */
 }
 
-.hamburger {
-    display: none;
-    /* 桌機隱藏 */
-    font-size: 4em;
-    cursor: pointer;
-    color: #F5F5F5;
-}
-
 h1 {
     font-size: 38px;
     /* 標題字體大小 */
-    color: #d4d4d4;
+    color: #d97706;
 }
 
 h2 {
@@ -52,7 +46,7 @@ h2 {
     /* 標題置中 */
     margin: 15px 0;
     /* 上下外邊距 */
-    color: #083344;
+    color: #d97706;
     /* 標題顏色 */
 }
 
@@ -63,8 +57,16 @@ h3 {
     /* 副標題置中 */
     margin: 10px 0;
     /* 上下外邊距 */
-    color: #083344;
+    color: #d97706;
     /* 副標題顏色 */
+}
+
+.hamburger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 20px;
+    display: none;
 }
 
 img {
@@ -83,7 +85,7 @@ header {
     /* 先把左邊放到中間 */
     transform: translateX(-50%);
     /* 再往左移半個寬度，使容器置中 */
-    max-width: 1001px;
+    max-width: 1000px;
     /* 最大寬度 */
     width: 100%;
     /* 寬度隨容器縮放 */
@@ -92,7 +94,7 @@ header {
     /* 左右分開 */
     align-items: center;
     /* 垂直置中 */
-    background-color: #0c4a6e;
+    background-color: #fde68a;
     height: 70px;
     z-index: 1000;
     /* 確保在最上層 */
@@ -106,7 +108,7 @@ header {
     /* 讓 logo 和 h1 垂直置中 */
     gap: 10px;
     /* logo 與 h1 的間距 */
-    background-color: #0c4a6e;
+    background-color: #fde68a;
 }
 
 header .logo {
@@ -139,7 +141,7 @@ nav li {
 }
 
 nav ul li a {
-    color: #d4d4d4;
+    color: #d97706;
     /* 文字顏色 */
     text-decoration: none;
     /* 移除底線 */
@@ -148,7 +150,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    color: #fbbf24;
     /* 滑鼠懸停時的顏色 */
 }
 
@@ -199,7 +201,7 @@ nav ul li a:hover {
     /* 水平置中 */
     justify-content: center;
     /* 垂直置中 */
-    color: #0c4a6e;
+    color: #b45309;
     /* 文字顏色 */
     text-align: center;
     /*  多行文字置中  */
@@ -212,7 +214,7 @@ nav ul li a:hover {
 }
 
 .abouts h2 {
-    color: #082f49;
+    color: #78350f;
     /* 標題顏色 */
     z-index: 2;
 }
@@ -285,7 +287,7 @@ nav ul li a:hover {
     /* 水平置中 */
     justify-content: center;
     /* 垂直置中 */
-    color: #164e63;
+    color: #78350f;
     /* 文字顏色 */
     text-align: center;
     /* 文字置中 */
@@ -307,8 +309,8 @@ footer {
     /* 置中對齊 */
     padding: 10px;
     /* 上下內邊距 */
-    background-color: #334155;
-    color: #f1f5f9;
+    background-color: #fde68a;
+    color: #78350f;
     /* 文字顏色 */
     font-size: 14px;
     /* 字體大小 */
@@ -380,7 +382,7 @@ footer {
         /* 避免變形 */
     }
 
-    .hamburger {
+    /* .hamburger img {
         position: absolute;
         right: 20px;
         top: 50%;
@@ -388,6 +390,27 @@ footer {
         display: block;
         font-size: 2em;
         cursor: pointer;
+    } */
+    .hamburger {
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 20px;
+        background-image: url("../image/漢堡選單.png");
+        /* 預設圖片 */
+        background-size: contain;
+        /* 保持比例，不裁切 */
+        background-repeat: no-repeat;
+        background-position: center;
+        /* 置中 */
+        cursor: pointer;
+    }
+
+
+    .hamburger:hover {
+        background-image: url("../image/豆干選單.png");
+        /* 懸停時圖片 */
     }
 
     .header-content h1 {
@@ -406,10 +429,13 @@ footer {
         overflow: hidden;
         /* 隱藏溢出 */
         text-align: center;
-        background-color: #0c4a6e;
+        background-color: #fde68a;
         flex-direction: column;
-        transition: max-height 1s ease-in-out;
-        /* 0.5秒滑動動畫 */
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.6s ease, transform 0.8s ease, max-height 0.5s ease;
+        pointer-events: none;
+        /* 防止點擊還沒展開 */
     }
 
     nav ul li {
@@ -424,8 +450,10 @@ footer {
     }
 
     nav ul.show {
-        max-height: 600px;
-        /* 展開高度，足夠放完整選單 */
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        max-height: 500px;
     }
 
     .about {
