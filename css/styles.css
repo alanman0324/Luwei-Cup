@@ -46,7 +46,7 @@ h2 {
     /* 標題置中 */
     margin: 15px 0;
     /* 上下外邊距 */
-    color: #d97706;
+    color: #451a03;
     /* 標題顏色 */
 }
 
@@ -57,7 +57,7 @@ h3 {
     /* 副標題置中 */
     margin: 10px 0;
     /* 上下外邊距 */
-    color: #d97706;
+    color: #451a03;
     /* 副標題顏色 */
 }
 
@@ -201,7 +201,7 @@ nav ul li a:hover {
     /* 水平置中 */
     justify-content: center;
     /* 垂直置中 */
-    color: #b45309;
+    color: #78350f;
     /* 文字顏色 */
     text-align: center;
     /*  多行文字置中  */
@@ -214,9 +214,18 @@ nav ul li a:hover {
 }
 
 .abouts h2 {
-    color: #78350f;
+    color: #451a03;
     /* 標題顏色 */
     z-index: 2;
+}
+
+.abouts ul {
+    text-align: left;
+    /* 文字靠左 */
+    margin: 0 auto;
+    /* 如果要整個 ul 仍然在區塊中置中 */
+    padding-left: 1.2em;
+    /* 適度縮排 */
 }
 
 .products {
@@ -254,6 +263,11 @@ nav ul li a:hover {
     /* 左右25px的外邊距 */
     overflow-y: auto;
     /* 允許垂直滾動 */
+}
+
+.product-item ul li {
+    list-style-position: inside;
+    /* 讓圓點在文字裡側，不額外多縮一格 */
 }
 
 #menu {
@@ -302,6 +316,18 @@ nav ul li a:hover {
 .contact li {
     list-style: none;
     /* 移除每個 li 的點點 */
+}
+
+.contact li a {
+    color: #d97706;
+    /* 文字顏色 */
+    text-decoration: none;
+    /* 移除底線 */
+}
+
+.contact li a:hover {
+    color: #fbbf24;
+    /* 滑鼠懸停時的顏色 */
 }
 
 footer {
