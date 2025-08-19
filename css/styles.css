@@ -356,27 +356,34 @@ footer {
     position: fixed;
     bottom: 10px;
     right: 30px;
-    display: none;
-    /* 預設隱藏 */
     z-index: 1000;
     cursor: pointer;
+    pointer-events: none;
+    /* 隱藏時不能點 */
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 #backToTop img {
-    width: 50px;
-    /* 調整按鈕大小 */
+    width: 45px;
     height: auto;
-    /* 調整按鈕大小 */
-    transition: transform 0.2s ease;
-    opacity: 0.3;
-    /* 預設透明度 */
+    opacity: 0.2;
+    /* 預設透明 */
+    transition: opacity 0.8s ease-in-out, transform 0.4s ease-in-out;
+    /* 透明度和縮放都有動畫 */
+}
+
+#backToTop.show img {
+    opacity: 0.6;
+    /* 滑下來出現時仍是半透明 */
+    pointer-events: auto;
+    /* 顯示時可點 */
 }
 
 #backToTop:hover img {
-    transform: scale(1.1);
-    /* 懸停微放大 */
-    opacity: 0.9;
-    /* 懸停時變不透明 */
+    transform: scale(1.15);
+    /* 懸停時放大一點 */
+    opacity: 1;
+    /* 懸停時變完全不透明 */
 }
 
 
