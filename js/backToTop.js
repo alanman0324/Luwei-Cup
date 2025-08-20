@@ -1,10 +1,16 @@
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTop.classList.add('show'); // 顯示按鈕
+    // 判斷螢幕寬度
+    const isMobile = window.innerWidth <= 768;
+
+    // 閾值：手機 100px，桌機 300px
+    const threshold = isMobile ? 100 : 300;
+
+    if (window.scrollY > threshold) {
+        backToTop.classList.add('show');
     } else {
-        backToTop.classList.remove('show'); // 隱藏按鈕
+        backToTop.classList.remove('show');
     }
 });
 
