@@ -215,6 +215,7 @@ nav ul li a:hover {
     /* 文字大小 */
     z-index: 1;
     /* 確保在遮罩上方 */
+    background-color: #fbbf24;
 }
 
 .abouts h2 {
@@ -421,6 +422,10 @@ footer {
         /* 副標題置中 */
     }
 
+    h4 {
+        font-size: 24px;
+    }
+
     .products {
         flex-direction: column;
         /* 手機上垂直排列產品 */
@@ -562,11 +567,15 @@ footer {
         /* 手機上寬度 */
         height: auto;
         /* 高度自適應內容 */
-        padding: 20px;
-        /* 手機上內邊距 */
+
         font-size: 20px;
         /* 手機上字體大小 */
         text-align: left;
+        margin: 0 auto;
+    }
+
+    .abouts ul li {
+        margin-left: -20px;
     }
 
     .products {
