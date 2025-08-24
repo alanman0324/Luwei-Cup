@@ -204,7 +204,6 @@ nav ul li a:hover {
     color: #78350f;
     /* 文字顏色 */
     text-align: center;
-    /*  多行文字置中  */
     font-weight: 600;
     /* 文字加粗 */
     font-size: 20px;
@@ -554,14 +553,15 @@ footer {
     }
 
     .abouts {
-        width: 85%;
+        width: 90%;
         /* 手機上寬度 */
         height: auto;
         /* 高度自適應內容 */
         padding: 20px;
         /* 手機上內邊距 */
-        font-size: 19px;
+        font-size: 20px;
         /* 手機上字體大小 */
+        text-align: left;
     }
 
     .products {
