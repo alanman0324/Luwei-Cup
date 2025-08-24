@@ -268,8 +268,8 @@ nav ul li a:hover {
     padding: 12px;
     box-sizing: border-box;
     /* 避免 padding 撐大區塊 */
-    padding-left: 1em;
-    /* 適度縮排 */
+    text-align: left;
+    /* 文字靠左 */
 }
 
 .product-item ul li {
@@ -549,6 +549,10 @@ footer {
         margin: 0 auto;
     }
 
+    .about .overlay {
+        opacity: 0.85;
+    }
+
     .abouts {
         width: 85%;
         /* 手機上寬度 */
@@ -556,7 +560,7 @@ footer {
         /* 高度自適應內容 */
         padding: 20px;
         /* 手機上內邊距 */
-        font-size: 18px;
+        font-size: 19px;
         /* 手機上字體大小 */
     }
 
@@ -586,8 +590,8 @@ footer {
         padding: 20px;
         /* 手機上內邊距 */
         font-size: 16px;
-        text-align: center;
-        /* ⬅ 文字水平置中 */
+        text-align: left;
+        /* 文字靠左 */
         display: flex;
         /* 用 flex 讓文字垂直置中 */
         flex-direction: column;
