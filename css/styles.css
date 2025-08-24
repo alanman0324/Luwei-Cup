@@ -37,6 +37,7 @@ h1 {
     font-size: 38px;
     /* 標題字體大小 */
     color: #d97706;
+    display: none;
 }
 
 h2 {
@@ -67,13 +68,6 @@ h3 {
     position: absolute;
     right: 20px;
     display: none;
-}
-
-img {
-    max-width: 100%;
-    /* 圖片最大寬度為容器的100% */
-    height: auto;
-    /* 高度自動調整以保持比例 */
 }
 
 header {
@@ -121,8 +115,14 @@ header .logo {
     /* 與左邊內容間距 */
 }
 
+header .title {
+    width: 170px;
+    height: auto;
+    margin-left: -5px;
+}
+
 nav {
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
     flex-direction: column;
     /* 垂直排列 */
@@ -130,14 +130,14 @@ nav {
     /* 垂直置中 */
     align-items: flex-end;
     /* 讓內容靠右對齊 */
+
 }
 
 nav li {
     display: inline-block;
     /* 讓列表項目水平排列 */
-    margin-right: 2.5vw;
+    margin-right: 2vw;
     /* 每個項目的間距 */
-
 }
 
 nav ul li a {
@@ -182,7 +182,7 @@ nav ul li a:hover {
     height: 100%;
     background-color: #999999;
     /* 蓋一層灰色透明遮罩 */
-    opacity: 0.8;
+    opacity: 0.75;
     /* 透明度（越小越透明）*/
 }
 
@@ -217,6 +217,7 @@ nav ul li a:hover {
     color: #451a03;
     /* 標題顏色 */
     z-index: 2;
+    font-size: 36px;
 }
 
 .abouts ul {
@@ -226,6 +227,7 @@ nav ul li a:hover {
     /* 讓整個 ul 仍然在區塊中置中 */
     padding-left: 1.2em;
     /* 適度縮排 */
+    list-style: none;
 }
 
 .products {
@@ -233,7 +235,7 @@ nav ul li a:hover {
     /* 使用彈性盒模型 */
     justify-content: center;
     /* 讓內容水平置中 */
-    max-width: 840px;
+    max-width: 800px;
     /* 設定寬度 */
     width: 100%;
     font-size: 18px;
@@ -261,11 +263,13 @@ nav ul li a:hover {
     width: 100%;
     height: auto;
     /* 不要固定高度，讓文字自由撐開 */
-    margin: 30px 10px;
+    margin: 0px 10px;
     /* 統一外邊距 */
-    padding: 10px;
+    padding: 12px;
     box-sizing: border-box;
     /* 避免 padding 撐大區塊 */
+    padding-left: 1em;
+    /* 適度縮排 */
 }
 
 .product-item ul li {
@@ -275,8 +279,9 @@ nav ul li a:hover {
     /* 文字靠左 */
     margin: 0 auto;
     /* 讓整個 ul 仍然在區塊中置中 */
-    padding-left: 2px;
-    /* 適度縮排 */
+    line-height: 1.4;
+    /* 行高 */
+    list-style: none;
 }
 
 #menu {
@@ -326,6 +331,7 @@ nav ul li a:hover {
 .contact li {
     list-style: none;
     /* 移除每個 li 的點點 */
+    text-align: left;
 }
 
 .contact li a {
@@ -451,6 +457,10 @@ footer {
         /* 與左邊內容間距 */
         object-fit: contain;
         /* 避免變形 */
+    }
+
+    header .title {
+        display: none;
     }
 
     /* .hamburger img {
@@ -617,5 +627,10 @@ footer {
         width: 30px;
         /* 調整按鈕大小 */
         height: auto;
+    }
+
+    footer {
+        font-size: 10px;
+        /* 手機上字體大小 */
     }
 }
