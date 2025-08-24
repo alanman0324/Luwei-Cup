@@ -215,7 +215,6 @@ nav ul li a:hover {
     /* 文字大小 */
     z-index: 1;
     /* 確保在遮罩上方 */
-    background-color: #fbbf24;
 }
 
 .abouts h2 {
@@ -404,8 +403,7 @@ footer {
 /* 手機板 */
 @media (max-width: 768px) {
     .page {
-        padding-top: 0;
-        /* 移除桌機用的 top 空間 */
+        padding-top: 70px;
     }
 
     h2 {
@@ -423,7 +421,7 @@ footer {
     }
 
     h4 {
-        font-size: 24px;
+        font-size: 26px;
     }
 
     .products {
@@ -452,7 +450,10 @@ footer {
         right: 0;
         position: relative;
         /* 讓內部元素可以絕對定位 */
-
+        position: fixed;
+        /* 固定在頁面頂部 */
+        top: 0;
+        /* 距離頂部0px */
     }
 
     header .logo {
@@ -556,6 +557,7 @@ footer {
         height: auto;
         /* 高度自適應內容 */
         margin: 0 auto;
+
     }
 
     .about .overlay {
