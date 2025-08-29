@@ -565,19 +565,24 @@ footer {
     }
 
     .abouts {
-        width: 90%;
+        width: 80%;
         /* 手機上寬度 */
         height: auto;
         /* 高度自適應內容 */
-
-        font-size: 20px;
+        font-size: 18px;
         /* 手機上字體大小 */
         text-align: left;
         margin: 0 auto;
     }
 
+    .abouts h4 {
+        text-align: center;
+        /* 標題置中 */
+    }
+
     .abouts ul li {
         margin-left: -20px;
+        margin-bottom: 5px;
     }
 
     .products {
